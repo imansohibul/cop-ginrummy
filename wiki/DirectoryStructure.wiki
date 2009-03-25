@@ -1,6 +1,5 @@
 #summary A copy of my email explaining the Google Code directory structure.
-= Google Code Directory Structure =
-*   And some other notes   *
+= Google Code Directory Structure & other notes =
 
 Google Code is basically setup, and I have added you all as owners. TortoiseSVN is incredibly easy to use from what I have seen, and if you want to use SVN on a linux box you can lookup how to do it there as well (there are a few GUI's and you can always go at it from the terminal).
 
