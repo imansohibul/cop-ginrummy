@@ -1,4 +1,5 @@
 #summary March 26, 2009, 11:30am  ::  Status update email from Andrea Kosta concerning the team's progress and a temporary schedule.
+#labels Featured
 
 *From: Andrea Kosta*
 *To: All Team Members*
