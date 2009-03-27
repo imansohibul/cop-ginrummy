@@ -35,4 +35,4 @@ longer than most, but will get us on our feet and keep us on the ball.
 
 -Andrea
 
-CURRENT OBJECTIVE:  complete use-case model before the weekend, let's grind down and get it done
+*CURRENT OBJECTIVE:*  complete use-case model before the weekend, let's grind down and get it done
