@@ -2,25 +2,34 @@
 #define STOCKPILE_H
 
 #include <string>
+#include <vector>
+#include <ctime>
 
 #include "SimMgmt.h"
-#include "Card.h"
 #include "CardPile.h"
+#include "Card.h"
 
 using namespace std;
 using namespace SimMgmt;
 
 namespace SimModels {
 
-class StockPile: public CardPile {
-public:
-	StockPile();
+	class StockPile: public CardPile {
 
-    void Shuffle();
+	public:
+		StockPile();
 
-	bool hasTwo();
+        bool hasTwo();
+		//~StockPile();
+		
+		vector<Card> Shuffle();
+		
+	protected:
+	
+	private:
 
-};
+	};
+
 }
 #endif
 

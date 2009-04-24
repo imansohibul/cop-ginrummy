@@ -2,6 +2,7 @@
 #define CARDPILE_H
 
 #include <string>
+#include <vector>
 
 #include "SimMgmt.h"
 #include "Card.h"
@@ -15,7 +16,7 @@ class CardPile {
 public:
 	CardPile();
 
-    virtual void Add(const Card & inserted);
+    void Add(const Card & inserted);
 
 	Card * Draw();
 

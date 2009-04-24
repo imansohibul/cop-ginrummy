@@ -7,22 +7,20 @@
 #include "Card.h"
 #include "CardPile.h"
 
+
 using namespace std;
 using namespace SimMgmt;
 
 namespace SimModels {
+          
+class DiscardPile : public CardPile {
+  public:
 
-class DiscardPile: public CardPile {
-public:
+    DiscardPile();
 	Card * getTopCard();
-
-	DiscardPile();
-
-    void Add(const Card & inserted);
-
-	bool isEmpty();
+    bool isEmpty();
 
 };
+
 }
 #endif
-
