@@ -1,3 +1,5 @@
+Date and time of run : Mon Apr 27 17:57:36 2009
+Project : Gin Rummy Simulator
 
 
 GinRummy{ 
@@ -63,56 +65,10 @@ GinRummy{
                   }Dealer 
 }GinRummy 
 
+TIME: 0 SENDER: Devin RECVR: Devin  Message{  Handler: 15
+                                              Description: Shuffle the stock pile 
+                                    }Message 
 
-GinRummy{ 
-          SecondsPerTick: 1
-          Rounds: 20
-          Player: 
-                  Player{ 
-                           name: Fred
-                           Speed_InitialSort: 20
-                           Speed_Draw: 2
-                           Speed_Discard: 2
-                           Speed_DecisionPickup: 4
-                           Speed_DecisionDiscard: 4
-                           StrategyChoice: Beginner
-                  }Player 
-          Dealer: 
-                  Dealer{ 
-                           name: Devin
-                           Speed_InitialSort: 20
-                           Speed_Draw: 2
-                           Speed_Discard: 2
-                           Speed_DecisionPickup: 4
-                           Speed_DecisionDiscard: 4
-                           StrategyChoice: Advanced
-                           Speed_Shuffle: 40
-                           Speed_Deal: 34
-                  }Dealer 
-}GinRummy 
-Simulation Statistics:
-Minimum number of events : 0
-Average number of events : 0
-Maximum number of events : 0
-Minimum game length in ticks: 0
-Average game length in ticks: 0
-Maximum game length in ticks: 0
-Minimum game length in time: 4234910:2293400:0
-Average game length in time: 4234910:2293400:0
-Maximum game length in time: 4234910:2293400:0
-Minimum winning game length of Player in ticks: 0
-Average winning game length of Player in ticks: 0
-Maximum winning game length of Player in ticks: 0
-Minimum winning game length of Player in time: 4234910:2293400:0
-Average winning game length of Player in time: 4234910:2293400:0
-Maximum winning game length of Player in time: 4234910:2293400:0
-Minimum winning game length of Dealer in ticks: 0
-Average winning game length of Dealer in ticks: 0
-Maximum winning game length of Dealer in ticks: 0
-Minimum winning game length of Dealer in time: 4234910:2293400:0
-Average winning game length of Dealer in time: 4234910:2293400:0
-Maximum winning game length of Dealer in time: 4234910:2293400:0
-Player wins per hour: 2.4998e-307
-Dealer wins per hour: 2.4998e-307
-Percentage Player wins: 2.4998e-307
-Percentage Dealer wins: 2.4998e-307
+TIME: 40 SENDER: Devin RECVR: Devin  Message{  Handler: 16
+                                               Description: The stock pile is shuffled 
+                                     }Message 

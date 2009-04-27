@@ -1,4 +1,5 @@
 #include "GinRummy.h"
+#include <time.h>
 
 namespace SimModels {
 // GinRummy methods
@@ -11,7 +12,20 @@ GinRummy::~GinRummy()
 // Constructor
 GinRummy::GinRummy()
 {
+	ostream& simlog = simOutMgr.getStream();
 	ifstream& fin = simInMgr.getStream();
+
+			time_t rawtime;
+		struct tm * timeinfo;
+		char TimeStamp[80];
+		
+		time ( &rawtime );
+		timeinfo = localtime ( &rawtime );
+		
+		strftime (TimeStamp,80,"%a %b %d %X %Y",timeinfo);
+
+		simlog << "Date and time of run : " << TimeStamp << endl;
+		simlog << "Project : Gin Rummy Simulator" << endl;
 
 		
 		for(int k = 1; k < 53; k++) {
@@ -93,30 +107,12 @@ void GinRummy::Simulate()
         Message *msg;
 		string   token;
 		ostream& simlog = simOutMgr.getStream();
-
-		struct StatData {
-			int minEvents;
-			double avgEvents;
-			int maxEvents;
-			int minTicks;
-			double avgTicks;
-			int maxTicks;
-			
-			int minPlayerTicks;
-			double avgPlayerTicks;
-			int maxPlayerTicks;
-			
-			int minDealerTicks;
-			double avgDealerTicks;
-			int maxDealerTicks;
-			
-			int playerWinCount;
-			int dealerWinCount;
-		};
-		
+		bool firstGame = true;
 		
 		for(int i = 0; i < i_NumberOfRounds; i++) {
-			StatisticalData = new struct StatData;
+			
+			((Dealer*)apP_Players[1])->StartGame();
+			
 			
 			while( theEventMgr.moreEvents() )
 			{
@@ -139,7 +135,14 @@ void GinRummy::Simulate()
 				//lastEvent = e.getTime(); 
 				//numEvents++;
 			}
-		
+			if(firstGame) {
+				// Fill in all fields of StatisticalData with initial values
+				
+			} else {
+				
+				
+				
+			}
 		
 		}
 }
@@ -161,7 +164,7 @@ void GinRummy::WrapUp()
 
 	
 
-	simlog << "Simulation Statistics:" << endl;
+	simlog << endl << "Simulation Statistics:" << endl;
 	simlog << "Minimum number of events : "
 			<< i_value << endl; //15
 	simlog << "Average number of events : "
