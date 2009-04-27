@@ -3,6 +3,11 @@
 namespace SimModels {
 // GinRummy methods
 
+
+GinRummy::~GinRummy()
+{
+
+}
 // Constructor
 GinRummy::GinRummy()
 {
@@ -50,7 +55,7 @@ GinRummy::GinRummy()
 		if ( token != "Dealer:" ) 
 		   throw AppError(string("Incorrect Token '" + token + "', excpected token 'Dealer:' !"),
 				string("GinRummy::GinRummy())"));
-		apP_Players[1] = new Dealer(fin, &SP_Deck, this);
+		apP_Players[1] = new Dealer(fin, &SP_Deck);
 		//apP_Players[1]->Extract();
 
 		// Parse closing token
@@ -89,28 +94,54 @@ void GinRummy::Simulate()
 		string   token;
 		ostream& simlog = simOutMgr.getStream();
 
-		while( theEventMgr.moreEvents() )
-		{
-			//retrive next event and message
-			e   = theEventMgr.getNextEvent();
-            msg = e.getMsg();
-		
-			// Output to simlog
-			simOutMgr.newLine();
-			simlog << e;
-			simOutMgr.newLine();
-
-			// Dispatch
-			e.getRecvr()->Dispatch( msg );  
+		struct StatData {
+			int minEvents;
+			double avgEvents;
+			int maxEvents;
+			int minTicks;
+			double avgTicks;
+			int maxTicks;
 			
-            // destruct message
-			delete msg; 
+			int minPlayerTicks;
+			double avgPlayerTicks;
+			int maxPlayerTicks;
+			
+			int minDealerTicks;
+			double avgDealerTicks;
+			int maxDealerTicks;
+			
+			int playerWinCount;
+			int dealerWinCount;
+		};
+		
+		
+		for(int i = 0; i < i_NumberOfRounds; i++) {
+			StatisticalData = new struct StatData;
+			
+			while( theEventMgr.moreEvents() )
+			{
+				//retrive next event and message
+				e   = theEventMgr.getNextEvent();
+				msg = e.getMsg();
+			
+				// Output to simlog
+				simOutMgr.newLine();
+				simlog << e;
+				simOutMgr.newLine();
 
-			// Update statistical data
-			//lastEvent = e.getTime(); 
-			//numEvents++;
+				// Dispatch
+				e.getRecvr()->Dispatch( msg );  
+				
+				// destruct message
+				delete msg; 
+
+				// Update statistical data
+				//lastEvent = e.getTime(); 
+				//numEvents++;
+			}
+		
+		
 		}
-
 }
 
 void GinRummy::WrapUp()
