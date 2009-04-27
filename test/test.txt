@@ -15,7 +15,6 @@ GinRummy{
                   }Player 
           Dealer: 
                   Dealer{ 
-                          
                            name: Devin
                            Speed_InitialSort: 20
                            Speed_Draw: 2
@@ -51,7 +50,6 @@ GinRummy{
                   }Player 
           Dealer: 
                   Dealer{ 
-                          
                            name: Devin
                            Speed_InitialSort: 20
                            Speed_Draw: 2
@@ -80,7 +78,6 @@ GinRummy{
                   }Player 
           Dealer: 
                   Dealer{ 
-                          
                            name: Devin
                            Speed_InitialSort: 20
                            Speed_Draw: 2
