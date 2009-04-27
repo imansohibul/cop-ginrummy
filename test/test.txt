@@ -1,10 +1,10 @@
-Date and time of run : Mon Apr 27 17:57:36 2009
+Date and time of run : Mon Apr 27 18:08:35 2009
 Project : Gin Rummy Simulator
 
 
 GinRummy{ 
           SecondsPerTick: 1
-          Rounds: 20
+          Rounds: 1
           Player: 
                   Player{ 
                            name: Fred
@@ -40,7 +40,7 @@ PlayersMsg{
 
 GinRummy{ 
           SecondsPerTick: 1
-          Rounds: 20
+          Rounds: 1
           Player: 
                   Player{ 
                            name: Fred
@@ -72,3 +72,127 @@ TIME: 0 SENDER: Devin RECVR: Devin  Message{  Handler: 15
 TIME: 40 SENDER: Devin RECVR: Devin  Message{  Handler: 16
                                                Description: The stock pile is shuffled 
                                      }Message 
+Start shuffle
+shuffled
+Dealing cards set 0
+Dealing cards set 1
+Dealing cards set 2
+Dealing cards set 3
+Dealing cards set 4
+Dealing cards set 5
+Dealing cards set 6
+Dealing cards set 7
+Dealing cards set 8
+Dealing cards set 9
+dealt
+deal comp
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D K
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: C 10
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: H Q
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: C 4
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D Q
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: S 2
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D A
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: C 3
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: S 10
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 4
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: H 2
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D J
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: S 4
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 6
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: C 8
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: H 10
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: S 8
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 9
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: H 8
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 3
+                                     }CardMsg 
+
+TIME: 74 SENDER: Devin RECVR: Fred  Message{  Handler: 5
+                                              Description: The hands are dealt 
+                                    }Message 
+
+Fred: Resetting score
+Fred: Unsorted hand: D K H Q D Q D A S 10 H 2 S 4 C 8 S 8 H 8
+Fred: Sorted hand: D A H 2 S 4 C 8 S 8 H 8 S 10 H Q D Q D K
+
+
