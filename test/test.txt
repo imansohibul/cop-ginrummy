@@ -27,11 +27,12 @@ GinRummy{
                   }Dealer 
 }GinRummy 
 
-PlayersMsg{  Handler: 0
+PlayersMsg{ 
+             Handler: 0
              Description: Initialize Players 
              Players: 
                        agent[ 0 ] = Player: Fred
-                       agent[ 0 ] = Dealer: Devin
+                       agent[ 1 ] = Dealer: Devin
 }PlayersMsg 
 
 
