@@ -1,4 +1,4 @@
-Date and time of run : Mon Apr 27 18:08:35 2009
+Date and time of run : Mon Apr 27 18:17:25 2009
 Project : Gin Rummy Simulator
 
 
@@ -72,109 +72,35 @@ TIME: 0 SENDER: Devin RECVR: Devin  Message{  Handler: 15
 TIME: 40 SENDER: Devin RECVR: Devin  Message{  Handler: 16
                                                Description: The stock pile is shuffled 
                                      }Message 
-Start shuffle
-shuffled
-Dealing cards set 0
-Dealing cards set 1
-Dealing cards set 2
-Dealing cards set 3
-Dealing cards set 4
-Dealing cards set 5
-Dealing cards set 6
-Dealing cards set 7
-Dealing cards set 8
-Dealing cards set 9
-dealt
-deal comp
 
 TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
                                               Description: Card Dealt 
-                                              Card: D K
+                                              Card: D 10
                                     }CardMsg 
 
 TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
                                                Description: Card Dealt 
-                                               Card: C 10
+                                               Card: H 9
                                      }CardMsg 
 
 TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
                                               Description: Card Dealt 
-                                              Card: H Q
+                                              Card: C 5
                                     }CardMsg 
 
 TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
                                                Description: Card Dealt 
-                                               Card: C 4
+                                               Card: D 5
                                      }CardMsg 
 
 TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
                                               Description: Card Dealt 
-                                              Card: D Q
+                                              Card: S A
                                     }CardMsg 
 
 TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
                                                Description: Card Dealt 
-                                               Card: S 2
-                                     }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
-                                              Description: Card Dealt 
-                                              Card: D A
-                                    }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
-                                               Description: Card Dealt 
-                                               Card: C 3
-                                     }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
-                                              Description: Card Dealt 
-                                              Card: S 10
-                                    }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
-                                               Description: Card Dealt 
-                                               Card: D 4
-                                     }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
-                                              Description: Card Dealt 
-                                              Card: H 2
-                                    }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
-                                               Description: Card Dealt 
-                                               Card: D J
-                                     }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
-                                              Description: Card Dealt 
-                                              Card: S 4
-                                    }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
-                                               Description: Card Dealt 
-                                               Card: D 6
-                                     }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
-                                              Description: Card Dealt 
-                                              Card: C 8
-                                    }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
-                                               Description: Card Dealt 
-                                               Card: H 10
-                                     }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
-                                              Description: Card Dealt 
-                                              Card: S 8
-                                    }CardMsg 
-
-TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
-                                               Description: Card Dealt 
-                                               Card: D 9
+                                               Card: C 8
                                      }CardMsg 
 
 TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
@@ -184,7 +110,67 @@ TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
 
 TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
                                                Description: Card Dealt 
-                                               Card: D 3
+                                               Card: S Q
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: H 10
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: C 3
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: S J
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: S 9
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D Q
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 8
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: S 10
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: S 5
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D K
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 4
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D 6
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: C A
                                      }CardMsg 
 
 TIME: 74 SENDER: Devin RECVR: Fred  Message{  Handler: 5
@@ -192,7 +178,34 @@ TIME: 74 SENDER: Devin RECVR: Fred  Message{  Handler: 5
                                     }Message 
 
 Fred: Resetting score
-Fred: Unsorted hand: D K H Q D Q D A S 10 H 2 S 4 C 8 S 8 H 8
-Fred: Sorted hand: D A H 2 S 4 C 8 S 8 H 8 S 10 H Q D Q D K
+Fred: Unsorted hand: D 10, C 5, S A, H 8, H 10, S J, D Q, S 10, D K, D 6,
+Fred: Sorted hand: S A, C 5, D 6, H 8, D 10, H 10, S 10, S J, D Q, D K,
 
 
+TIME: 74 SENDER: Devin RECVR: Devin  Message{  Handler: 5
+                                               Description: The hands are dealt 
+                                     }Message 
+
+Devin: Resetting score
+Devin: Unsorted hand: H 9, D 5, C 8, S Q, C 3, S 9, D 8, S 5, D 4, C A,
+Devin: Sorted hand: C A, C 3, D 4, D 5, S 5, C 8, D 8, H 9, S 9, S Q,
+
+
+TIME: 94 SENDER: Fred RECVR: Devin  Message{  Handler: 10
+                                              Description: The cards are sorted 
+                                    }Message 
+
+TIME: 94 SENDER: Devin RECVR: Devin  Message{  Handler: 10
+                                               Description: The cards are sorted 
+                                     }Message 
+
+TIME: 94 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                              Description: Your turn 
+                                    }Message 
+
+TIME: 94 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                              Description: Query Top Card 
+                                    }Message 
+
+TIME: 94 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                              Description: Top Card 
