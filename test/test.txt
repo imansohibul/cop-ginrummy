@@ -1,0 +1,63 @@
+
+GinRummy{ SecondsPerTick: 1
+          Rounds: 20
+          Player: 
+          Agent{  name: Fred
+          }Agent 
+          Dealer: 
+          Agent{  name: Devin
+          }Agent 
+}GinRummy 
+
+PlayersMsg{  Handler: 0
+             Description: Initialize Players 
+             Players: 
+                       agent[ 0 ] = Player: Fred
+                       agent[ 0 ] = Dealer: Devin
+}PlayersMsg 
+
+GinRummy{ SecondsPerTick: 1
+          Rounds: 20
+          Player: 
+          Agent{  name: Fred
+          }Agent 
+          Dealer: 
+          Agent{  name: Devin
+          }Agent 
+}GinRummy 
+
+GinRummy{ SecondsPerTick: 1
+          Rounds: 20
+          Player: 
+          Agent{  name: Fred
+          }Agent 
+          Dealer: 
+          Agent{  name: Devin
+          }Agent 
+}GinRummy 
+Simulation Statistics:
+Minimum number of events : 0
+Average number of events : 0
+Maximum number of events : 0
+Minimum game length in ticks: 0
+Average game length in ticks: 0
+Maximum game length in ticks: 0
+Minimum game length in time: 4234818:2293400:0
+Average game length in time: 4234818:2293400:0
+Maximum game length in time: 4234818:2293400:0
+Minimum winning game length of Player in ticks: 0
+Average winning game length of Player in ticks: 0
+Maximum winning game length of Player in ticks: 0
+Minimum winning game length of Player in time: 4234818:2293400:0
+Average winning game length of Player in time: 4234818:2293400:0
+Maximum winning game length of Player in time: 4234818:2293400:0
+Minimum winning game length of Dealer in ticks: 0
+Average winning game length of Dealer in ticks: 0
+Maximum winning game length of Dealer in ticks: 0
+Minimum winning game length of Dealer in time: 4234818:2293400:0
+Average winning game length of Dealer in time: 4234818:2293400:0
+Maximum winning game length of Dealer in time: 4234818:2293400:0
+Player wins per hour: 2.4998e-307
+Dealer wins per hour: 2.4998e-307
+Percentage Player wins: 2.4998e-307
+Percentage Dealer wins: 2.4998e-307
