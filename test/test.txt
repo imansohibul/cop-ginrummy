@@ -4,26 +4,30 @@ GinRummy{
           SecondsPerTick: 1
           Rounds: 20
           Player: 
-          Player{  name: Fred
-                   Speed_InitialSort: 20
-                   Speed_Draw: 2
-                   Speed_Discard: 2
-                   Speed_DecisionPickup: 4
-                   Speed_DecisionDiscard: 4
-                   StrategyChoice: Beginner
-          }Player 
+                  Player{ 
+                           name: Fred
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Beginner
+                  }Player 
           Dealer: 
-          Dealer{  name: Devin
-                   Speed_InitialSort: 20
-                   Speed_Draw: 2
-                   Speed_Discard: 2
-                   Speed_DecisionPickup: 4
-                   Speed_DecisionDiscard: 4
-                   StrategyChoice: Advanced
-                   Speed_Shuffle: 40
-                   Speed_Deal: 34
-          }Dealer 
+                  Dealer{ 
+                          
+                           name: Devin
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                           Speed_Shuffle: 40
+                           Speed_Deal: 34
+                  }Dealer 
 }GinRummy 
+
 PlayersMsg{  Handler: 0
              Description: Initialize Players 
              Players: 
@@ -36,72 +40,80 @@ GinRummy{
           SecondsPerTick: 1
           Rounds: 20
           Player: 
-          Player{  name: Fred
-                   Speed_InitialSort: 20
-                   Speed_Draw: 2
-                   Speed_Discard: 2
-                   Speed_DecisionPickup: 4
-                   Speed_DecisionDiscard: 4
-                   StrategyChoice: Beginner
-          }Player 
+                  Player{ 
+                           name: Fred
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Beginner
+                  }Player 
           Dealer: 
-          Dealer{  name: Devin
-                   Speed_InitialSort: 20
-                   Speed_Draw: 2
-                   Speed_Discard: 2
-                   Speed_DecisionPickup: 4
-                   Speed_DecisionDiscard: 4
-                   StrategyChoice: Advanced
-                   Speed_Shuffle: 40
-                   Speed_Deal: 34
-          }Dealer 
+                  Dealer{ 
+                          
+                           name: Devin
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                           Speed_Shuffle: 40
+                           Speed_Deal: 34
+                  }Dealer 
 }GinRummy 
+
 
 GinRummy{ 
           SecondsPerTick: 1
           Rounds: 20
           Player: 
-          Player{  name: Fred
-                   Speed_InitialSort: 20
-                   Speed_Draw: 2
-                   Speed_Discard: 2
-                   Speed_DecisionPickup: 4
-                   Speed_DecisionDiscard: 4
-                   StrategyChoice: Beginner
-          }Player 
+                  Player{ 
+                           name: Fred
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Beginner
+                  }Player 
           Dealer: 
-          Dealer{  name: Devin
-                   Speed_InitialSort: 20
-                   Speed_Draw: 2
-                   Speed_Discard: 2
-                   Speed_DecisionPickup: 4
-                   Speed_DecisionDiscard: 4
-                   StrategyChoice: Advanced
-                   Speed_Shuffle: 40
-                   Speed_Deal: 34
-          }Dealer 
-}GinRummy Simulation Statistics:
+                  Dealer{ 
+                          
+                           name: Devin
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                           Speed_Shuffle: 40
+                           Speed_Deal: 34
+                  }Dealer 
+}GinRummy 
+Simulation Statistics:
 Minimum number of events : 0
 Average number of events : 0
 Maximum number of events : 0
 Minimum game length in ticks: 0
 Average game length in ticks: 0
 Maximum game length in ticks: 0
-Minimum game length in time: 4234850:2293400:0
-Average game length in time: 4234850:2293400:0
-Maximum game length in time: 4234850:2293400:0
+Minimum game length in time: 4234910:2293400:0
+Average game length in time: 4234910:2293400:0
+Maximum game length in time: 4234910:2293400:0
 Minimum winning game length of Player in ticks: 0
 Average winning game length of Player in ticks: 0
 Maximum winning game length of Player in ticks: 0
-Minimum winning game length of Player in time: 4234850:2293400:0
-Average winning game length of Player in time: 4234850:2293400:0
-Maximum winning game length of Player in time: 4234850:2293400:0
+Minimum winning game length of Player in time: 4234910:2293400:0
+Average winning game length of Player in time: 4234910:2293400:0
+Maximum winning game length of Player in time: 4234910:2293400:0
 Minimum winning game length of Dealer in ticks: 0
 Average winning game length of Dealer in ticks: 0
 Maximum winning game length of Dealer in ticks: 0
-Minimum winning game length of Dealer in time: 4234850:2293400:0
-Average winning game length of Dealer in time: 4234850:2293400:0
-Maximum winning game length of Dealer in time: 4234850:2293400:0
+Minimum winning game length of Dealer in time: 4234910:2293400:0
+Average winning game length of Dealer in time: 4234910:2293400:0
+Maximum winning game length of Dealer in time: 4234910:2293400:0
 Player wins per hour: 2.4998e-307
 Dealer wins per hour: 2.4998e-307
 Percentage Player wins: 2.4998e-307
