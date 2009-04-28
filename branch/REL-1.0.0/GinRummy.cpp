@@ -1,12 +1,31 @@
 #include "GinRummy.h"
+#include <time.h>
 
 namespace SimModels {
 // GinRummy methods
 
+
+GinRummy::~GinRummy()
+{
+
+}
 // Constructor
 GinRummy::GinRummy()
 {
+	ostream& simlog = simOutMgr.getStream();
 	ifstream& fin = simInMgr.getStream();
+
+			time_t rawtime;
+		struct tm * timeinfo;
+		char TimeStamp[80];
+		
+		time ( &rawtime );
+		timeinfo = localtime ( &rawtime );
+		
+		strftime (TimeStamp,80,"%a %b %d %X %Y",timeinfo);
+
+		simlog << "Date and time of run : " << TimeStamp << endl;
+		simlog << "Project : Gin Rummy Simulator" << endl;
 
 		
 		for(int k = 1; k < 53; k++) {
@@ -50,7 +69,7 @@ GinRummy::GinRummy()
 		if ( token != "Dealer:" ) 
 		   throw AppError(string("Incorrect Token '" + token + "', excpected token 'Dealer:' !"),
 				string("GinRummy::GinRummy())"));
-		apP_Players[1] = new Dealer(fin, &SP_Deck, this);
+		apP_Players[1] = new Dealer(fin, &SP_Deck);
 		//apP_Players[1]->Extract();
 
 		// Parse closing token
@@ -88,29 +107,44 @@ void GinRummy::Simulate()
         Message *msg;
 		string   token;
 		ostream& simlog = simOutMgr.getStream();
-
-		while( theEventMgr.moreEvents() )
-		{
-			//retrive next event and message
-			e   = theEventMgr.getNextEvent();
-            msg = e.getMsg();
+		bool firstGame = true;
 		
-			// Output to simlog
-			simOutMgr.newLine();
-			simlog << e;
-			simOutMgr.newLine();
-
-			// Dispatch
-			e.getRecvr()->Dispatch( msg );  
+		for(int i = 0; i < i_NumberOfRounds; i++) {
 			
-            // destruct message
-			delete msg; 
+			((Dealer*)apP_Players[1])->StartGame();
+			
+			
+			while( theEventMgr.moreEvents() )
+			{
+				//retrive next event and message
+				e   = theEventMgr.getNextEvent();
+				msg = e.getMsg();
+			
+				// Output to simlog
+				simOutMgr.newLine();
+				simlog << e;
+				simOutMgr.newLine();
 
-			// Update statistical data
-			//lastEvent = e.getTime(); 
-			//numEvents++;
+				// Dispatch
+				e.getRecvr()->Dispatch( msg );  
+				
+				// destruct message
+				delete msg; 
+
+				// Update statistical data
+				//lastEvent = e.getTime(); 
+				//numEvents++;
+			}
+			if(firstGame) {
+				// Fill in all fields of StatisticalData with initial values
+				
+			} else {
+				
+				
+				
+			}
+		
 		}
-
 }
 
 void GinRummy::WrapUp()
@@ -130,7 +164,7 @@ void GinRummy::WrapUp()
 
 	
 
-	simlog << "Simulation Statistics:" << endl;
+	simlog << endl << "Simulation Statistics:" << endl;
 	simlog << "Minimum number of events : "
 			<< i_value << endl; //15
 	simlog << "Average number of events : "
@@ -234,34 +268,40 @@ void GinRummy::Insert()
 	// opening token
     simOutMgr.newLine();
 	simOutMgr.pushMargin();
+	simOutMgr.advToMargin();
 	simlog << "GinRummy{ ";
     simOutMgr.pushMargin();
 
 	// insert SecondsPerTick
-	simlog << "SecondsPerTick: " << i_SecondsPerTick;
 	simOutMgr.advToMargin();
+	simlog << "SecondsPerTick: " << i_SecondsPerTick;
 
 	// insert Rounds
-	simlog << "Rounds: " << i_NumberOfRounds;
 	simOutMgr.advToMargin();
+	simlog << "Rounds: " << i_NumberOfRounds;
 
 	// insert Player
+	simOutMgr.advToMargin();
 	simlog << "Player: ";
+	simOutMgr.pushMargin();
 	simOutMgr.advToMargin();
-	simlog << *((Player *)apP_Players[0]);
-	simOutMgr.advToMargin();
+	((Player *)apP_Players[0])->Insert(simlog);
+	simOutMgr.popMargin();
 
 	// insert Dealer
+	simOutMgr.advToMargin();
 	simlog << "Dealer: ";
+	simOutMgr.pushMargin();
 	simOutMgr.advToMargin();
-	simlog << *((Dealer *)apP_Players[1]);
+	((Dealer *)apP_Players[1])->Insert(simlog);
 	simOutMgr.popMargin();
-	simOutMgr.advToMargin();
+	simOutMgr.popMargin();
 
 	// insert closing token
+	simOutMgr.advToMargin();
 	simlog << "}GinRummy ";
 	simOutMgr.popMargin();
-	simOutMgr.advToMargin();
+	simOutMgr.newLine();
 }
 
 }

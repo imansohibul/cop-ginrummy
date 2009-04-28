@@ -46,13 +46,11 @@ namespace SimModels {
     }
 
     //public
-    Dealer::Dealer(ifstream& fin, StockPile * deck, GinRummy * inputGameControl):Player(fin) {
+    Dealer::Dealer(ifstream& fin, StockPile * deck):Player() {
 
         Extract(fin);
 
         pSP_StockPile = deck;
-
-        GameControl = inputGameControl;
 
         State = -1; //Not initialized
 
@@ -207,11 +205,12 @@ namespace SimModels {
 
     		// Construct new message
             //TODO / TEST: Okay to have two pointers to same message in two different events?
-            Message *returnhandMsg = pP_OtherPlayer->AcceptReturnHand();
+            Message *returnhandMsg1 = pP_OtherPlayer->AcceptReturnHand();
+            Message *returnhandMsg2 = pP_OtherPlayer->AcceptReturnHand();
     
     		// Construct new Event
-    		Event e1( time  , this , (Player*)this , returnhandMsg );
-            Event e2( time  , this , pP_OtherPlayer , returnhandMsg );
+    		Event e1( time  , this , (Player*)this , returnhandMsg1 );
+            Event e2( time  , this , pP_OtherPlayer , returnhandMsg2 );
     
     		// Post Events
     		theEventMgr.postEvent(e1);
@@ -291,9 +290,6 @@ namespace SimModels {
                 pSP_StockPile->Add(*(DP_Discard.Draw()));
             }
 
-            //TODO: signal GinRummy that game is over
-            //GameControl->signalGameOver();
-
         } else if ( State == 2 ) {
             State = 3; //Waiting for second hand empty
         } else {
@@ -339,12 +335,15 @@ namespace SimModels {
 
         }
 
+        DP_Discard.Add(*(pSP_StockPile->Draw()));
+
         // Construct new message
-        Message *dealCompleteMsg = pP_OtherPlayer->AcceptDealComplete();
+        Message *dealCompleteMsg1 = pP_OtherPlayer->AcceptDealComplete();
+        Message *dealCompleteMsg2 = pP_OtherPlayer->AcceptDealComplete();
 
 		// Construct new Event
-        Event e1( time + SpeedSettings[SpeedSettingIndexDealer::Speed_Deal] , this , pP_OtherPlayer , dealCompleteMsg );
-        Event e2( time + SpeedSettings[SpeedSettingIndexDealer::Speed_Deal] , this , (Player*)this , dealCompleteMsg );
+        Event e1( time + SpeedSettings[SpeedSettingIndexDealer::Speed_Deal] , this , pP_OtherPlayer , dealCompleteMsg1 );
+        Event e2( time + SpeedSettings[SpeedSettingIndexDealer::Speed_Deal] , this , (Player*)this , dealCompleteMsg2 );
 
         // Post Events
         theEventMgr.postEvent(e1);

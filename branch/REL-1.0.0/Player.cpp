@@ -89,6 +89,7 @@ namespace SimModels {
 	void Player::Put(ostream& fout) {
 
         simOutMgr.pushMargin();
+        simOutMgr.advToMargin();
 		Agent::Put();
 		simOutMgr.advToMargin();
 		fout << " Speed_InitialSort: " << SpeedSettings[SpeedSettingIndex::Speed_InitialSort];
@@ -112,6 +113,9 @@ namespace SimModels {
 
 
 
+    }
+
+    Player::Player():Agent() {
     }
 
     //public
@@ -258,11 +262,12 @@ namespace SimModels {
 		
 		// Construct new message
         //TODO / TEST: Okay to have two pointers to same message in two different events?
-        Message *returnhandMsg = AcceptReturnHand();
+        Message *returnhandMsg1 = AcceptReturnHand();
+        Message *returnhandMsg2 = AcceptReturnHand();
 
 		// Construct new Event
-		Event e1( time  , this , this , returnhandMsg );
-        Event e2( time  , this , pP_OtherPlayer , returnhandMsg );
+		Event e1( time  , this , this , returnhandMsg1 );
+        Event e2( time  , this , pP_OtherPlayer , returnhandMsg2 );
 
 		// Post Events
 		theEventMgr.postEvent(e1);
@@ -279,12 +284,12 @@ namespace SimModels {
         vC_Hand.push_back(*inputCard);
         sort(vC_Hand.begin(),vC_Hand.end(),ascending);
 
-        simlog << NameOf() << ": Sorted hand:";
+        simlog << endl << NameOf() << ": Sorted hand:";
 
         //TODO / TEST: should this be (*iter).toString() instead of iter->toString() ??
         for( iter = vC_Hand.begin(); iter != vC_Hand.end(); iter++ ) {
 
-            simlog << " " << iter->toString();
+            simlog << " " << iter->toString() << ",";
 
         }
         simlog << endl;
@@ -308,12 +313,15 @@ namespace SimModels {
         if (currentDeadwood.size() == 1) {
             Knock = true;
             Discard = true;
+            i_score = -1;
         } else if ( currentDeadwood.size() == 0 ) {
             Knock = true;
             Discard = false;
+            i_score = -1;
         } else if ( tempScoreCurrent <= 10 ) {
             Knock = true;
             Discard = true;
+            i_score = tempScoreCurrent;
         } else {
             Knock = false;
             Discard = true;
@@ -330,14 +338,17 @@ namespace SimModels {
      
                 if ( ( iter->getFaceValue() == currentDeadwood.back().getFaceValue() ) && ( iter->getSuitIndex() == currentDeadwood.back().getSuitIndex() ) ) {
 
+                    Card * tempCard = new Card(iter->getFaceValue(),iter->getSuitIndex());
 
-                    tempCardMsg = pD_Dealer->AcceptReceiveDiscard((Card*)&(*iter));
+                    tempCardMsg = pD_Dealer->AcceptReceiveDiscard(tempCard);
         
                     // Construct new Event
             		Event e( time + SpeedSettings[SpeedSettingIndex::Speed_DecisionDiscard] + SpeedSettings[SpeedSettingIndex::Speed_Discard], this , pD_Dealer , tempCardMsg );
             
             		// Post Event
             		theEventMgr.postEvent(e);
+
+                    vC_Hand.erase(iter);
 
                     break;
                 }
@@ -351,7 +362,7 @@ namespace SimModels {
             //TODO / TEST: should this be (*iter).toString() instead of iter->toString() ??
             for( iter = vC_Hand.begin(); iter != vC_Hand.end(); iter++ ) {
     
-                simlog << " " << iter->toString();
+                simlog << " " << iter->toString() << ",";
     
             }
             simlog << endl << endl;
@@ -366,6 +377,14 @@ namespace SimModels {
     		// Post Event
     		theEventMgr.postEvent(e);
 
+        } else {
+            Message *nextTurnMsg = pP_OtherPlayer->AcceptYourTurn();
+    
+    		// Construct new Event
+    		Event e( time  + SpeedSettings[SpeedSettingIndex::Speed_DecisionDiscard] + SpeedSettings[SpeedSettingIndex::Speed_Discard] , this , pP_OtherPlayer , nextTurnMsg );
+    
+    		// Post Event
+    		theEventMgr.postEvent(e);
         }
 
     }
@@ -389,7 +408,7 @@ namespace SimModels {
         
         for( iter = vC_Hand.begin(); iter != vC_Hand.end(); iter++ ) {
  
-            simlog << " " << iter->toString();
+            simlog << " " << iter->toString() << ",";
 
         }
         simlog << endl;
@@ -415,7 +434,7 @@ namespace SimModels {
         //TODO / TEST: should this be (*iter).toString() instead of iter->toString() ??
         for( iter = vC_Hand.begin(); iter != vC_Hand.end(); iter++ ) {
 
-            simlog << " " << iter->toString();
+            simlog << " " << iter->toString() << ",";
 
         }
         simlog << endl << endl;

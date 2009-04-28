@@ -15,6 +15,26 @@ using namespace SimMgmt;
 
 namespace SimModels {
 
+struct StatData {
+	int minEvents;
+	double avgEvents;
+	int maxEvents;
+	int minTicks;
+	double avgTicks;
+	int maxTicks;
+	
+	int minPlayerTicks;
+	double avgPlayerTicks;
+	int maxPlayerTicks;
+	
+	int minDealerTicks;
+	double avgDealerTicks;
+	int maxDealerTicks;
+	
+	int playerWinCount;
+	int dealerWinCount;
+};
+
 class GinRummy {
 public:
 	GinRummy();
@@ -28,8 +48,6 @@ public:
 	//Writes to the default program output stream
 	void Insert();
 
-    void signalGameOver();
-
 private:
 	int i_NumberOfRounds;
 
@@ -41,7 +59,6 @@ private:
 
 	StockPile SP_Deck;
 
-    bool b_onGoingGame;
 
 };
 
