@@ -1,0 +1,1280 @@
+Date and time of run : Tue Apr 28 22:05:03 2009
+Project : Gin Rummy Simulator
+
+
+GinRummy{ 
+          SecondsPerTick: 7
+          Rounds: 1
+          Player: 
+                  Player{ 
+                           name: Fred
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                  }Player 
+          Dealer: 
+                  Dealer{ 
+                           name: Devin
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                           Speed_Shuffle: 40
+                           Speed_Deal: 34
+                  }Dealer 
+}GinRummy 
+
+PlayersMsg{ 
+             Handler: 0
+             Description: Initialize Players 
+             Players: 
+                       agent[ 0 ] = Player: Fred
+                       agent[ 1 ] = Dealer: Devin
+}PlayersMsg 
+
+
+GinRummy{ 
+          SecondsPerTick: 7
+          Rounds: 1
+          Player: 
+                  Player{ 
+                           name: Fred
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                  }Player 
+          Dealer: 
+                  Dealer{ 
+                           name: Devin
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                           Speed_Shuffle: 40
+                           Speed_Deal: 34
+                  }Dealer 
+}GinRummy 
+
+
+Game1{
+TIME: 0 SENDER: Devin RECVR: Devin  Message{  Handler: 15
+                                              Description: Shuffle the stock pile 
+                                    }Message 
+
+TIME: 40 SENDER: Devin RECVR: Devin  Message{  Handler: 16
+                                               Description: The stock pile is shuffled 
+                                     }Message 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: H 8
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: S 7
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: C 7
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: S K
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D 3
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 2
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: S 4
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 5
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: C 8
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: S J
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: C 5
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: C 2
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: H 6
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 8
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D A
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: H 7
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: D K
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 4
+                                     }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 3
+                                              Description: Card Dealt 
+                                              Card: C 4
+                                    }CardMsg 
+
+TIME: 40 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 3
+                                               Description: Card Dealt 
+                                               Card: D 7
+                                     }CardMsg 
+
+TIME: 74 SENDER: Devin RECVR: Fred  Message{  Handler: 5
+                                              Description: The hands are dealt 
+                                    }Message 
+
+Fred: Resetting score
+Fred: Unsorted hand: H 8, C 7, D 3, S 4, C 8, C 5, H 6, D A, D K, C 4,
+Fred: Sorted hand: D A, D 3, S 4, C 4, C 5, H 6, C 7, H 8, C 8, D K,
+
+
+TIME: 74 SENDER: Devin RECVR: Devin  Message{  Handler: 5
+                                               Description: The hands are dealt 
+                                     }Message 
+
+Devin: Resetting score
+Devin: Unsorted hand: S 7, S K, D 2, D 5, S J, C 2, D 8, H 7, D 4, D 7,
+Devin: Sorted hand: D 2, C 2, D 4, D 5, S 7, H 7, D 7, D 8, S J, S K,
+
+
+TIME: 94 SENDER: Fred RECVR: Devin  Message{  Handler: 10
+                                              Description: The cards are sorted 
+                                    }Message 
+
+TIME: 94 SENDER: Devin RECVR: Devin  Message{  Handler: 10
+                                               Description: The cards are sorted 
+                                     }Message 
+
+TIME: 94 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                              Description: Your turn 
+                                    }Message 
+
+TIME: 94 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                              Description: Query Top Card 
+                                    }Message 
+
+TIME: 94 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                              Description: Top Card 
+                                              Card: S 3
+                                    }CardMsg 
+
+TIME: 100 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 100 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: H 3
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, D 3, H 3, S 4, C 4, C 5, H 6, C 7, H 8, C 8, D K,
+Fred: Sorted hand: D A, D 3, H 3, S 4, C 4, C 5, H 6, C 7, H 8, C 8,
+
+
+TIME: 106 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: D K
+                                     }CardMsg 
+
+TIME: 106 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 106 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 106 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: D K
+                                      }CardMsg 
+
+TIME: 112 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 112 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: S 8
+                                      }CardMsg 
+
+Devin: Sorted hand: D 2, C 2, D 4, D 5, S 7, H 7, D 7, D 8, S 8, S J, S K,
+Devin: Sorted hand: D 2, C 2, D 4, D 5, S 7, H 7, D 7, D 8, S 8, S J,
+
+
+TIME: 118 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: S K
+                                      }CardMsg 
+
+TIME: 118 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 118 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 118 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: S K
+                                     }CardMsg 
+
+TIME: 124 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 124 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: H J
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, D 3, H 3, S 4, C 4, C 5, H 6, C 7, H 8, C 8, H J,
+Fred: Sorted hand: D A, D 3, H 3, S 4, C 4, C 5, H 6, C 7, H 8, C 8,
+
+
+TIME: 130 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: H J
+                                     }CardMsg 
+
+TIME: 130 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 130 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 130 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: H J
+                                      }CardMsg 
+
+TIME: 136 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 136 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: D 9
+                                      }CardMsg 
+
+Devin: Sorted hand: D 2, C 2, D 4, D 5, S 7, H 7, D 7, D 8, S 8, D 9, S J,
+Devin: Sorted hand: D 2, C 2, D 4, D 5, S 7, H 7, D 7, D 8, S 8, D 9,
+
+
+TIME: 142 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: S J
+                                      }CardMsg 
+
+TIME: 142 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 142 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 142 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: S J
+                                     }CardMsg 
+
+TIME: 148 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 148 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: S 2
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, C 5, H 6, C 7, H 8, C 8,
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, C 5, H 6, C 7, H 8,
+
+
+TIME: 154 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: C 8
+                                     }CardMsg 
+
+TIME: 154 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 154 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 154 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: C 8
+                                      }CardMsg 
+
+TIME: 160 SENDER: Devin RECVR: Devin  Message{  Handler: 9
+                                                Description: Draw discard 
+                                      }Message 
+
+TIME: 160 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: C 8
+                                      }CardMsg 
+
+Devin: Sorted hand: D 2, C 2, D 4, D 5, S 7, H 7, D 7, D 8, S 8, C 8, D 9,
+Devin: Sorted hand: D 2, C 2, D 4, D 5, S 7, H 7, D 7, D 8, S 8, C 8,
+
+
+TIME: 166 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: D 9
+                                      }CardMsg 
+
+TIME: 166 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 166 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 166 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: D 9
+                                     }CardMsg 
+
+TIME: 172 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 172 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: H Q
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, C 5, H 6, C 7, H 8, H Q,
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, C 5, H 6, C 7, H 8,
+
+
+TIME: 178 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: H Q
+                                     }CardMsg 
+
+TIME: 178 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 178 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 178 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: H Q
+                                      }CardMsg 
+
+TIME: 184 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 184 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: H A
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, D 2, C 2, D 4, D 5, S 7, H 7, D 7, D 8, S 8, C 8,
+Devin: Sorted hand: H A, D 2, C 2, D 4, S 7, H 7, D 7, D 8, S 8, C 8,
+
+
+TIME: 190 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: D 5
+                                      }CardMsg 
+
+TIME: 190 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 190 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 190 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: D 5
+                                     }CardMsg 
+
+TIME: 196 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 196 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: C 6
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, C 5, H 6, C 6, C 7, H 8,
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, C 5, H 6, C 6, C 7,
+
+
+TIME: 202 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: H 8
+                                     }CardMsg 
+
+TIME: 202 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 202 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 202 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: H 8
+                                      }CardMsg 
+
+TIME: 208 SENDER: Devin RECVR: Devin  Message{  Handler: 9
+                                                Description: Draw discard 
+                                      }Message 
+
+TIME: 208 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: H 8
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, D 2, C 2, D 4, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 214 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: D 4
+                                      }CardMsg 
+
+TIME: 214 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 214 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 214 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: D 4
+                                     }CardMsg 
+
+TIME: 220 SENDER: Fred RECVR: Devin  Message{  Handler: 9
+                                               Description: Draw discard 
+                                     }Message 
+
+TIME: 220 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: D 4
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, D 4, C 5, H 6, C 6, C 7,
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 226 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: H 6
+                                     }CardMsg 
+
+TIME: 226 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 226 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 226 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: H 6
+                                      }CardMsg 
+
+TIME: 232 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 232 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: D Q
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8, D Q,
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 238 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: D Q
+                                      }CardMsg 
+
+TIME: 238 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 238 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 238 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: D Q
+                                     }CardMsg 
+
+TIME: 244 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 244 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: D 10
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, D 4, C 5, C 6, C 7, D 10,
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 250 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: D 10
+                                     }CardMsg 
+
+TIME: 250 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 250 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 250 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: D 10
+                                      }CardMsg 
+
+TIME: 256 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 256 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: H 5
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, D 2, C 2, H 5, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 262 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: H 5
+                                      }CardMsg 
+
+TIME: 262 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 262 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 262 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: H 5
+                                     }CardMsg 
+
+TIME: 268 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 268 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: S 5
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, D 4, C 5, S 5, C 6, C 7,
+Fred: Sorted hand: D A, S 2, D 3, H 3, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 274 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: S 5
+                                     }CardMsg 
+
+TIME: 274 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 274 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 274 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: S 5
+                                      }CardMsg 
+
+TIME: 280 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 280 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: C 10
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8, C 10,
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 286 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: C 10
+                                      }CardMsg 
+
+TIME: 286 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 286 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 286 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: C 10
+                                     }CardMsg 
+
+TIME: 292 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 292 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: H 2
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, H 2, D 3, H 3, S 4, C 4, D 4, C 5, C 6, C 7,
+Fred: Sorted hand: D A, S 2, H 2, D 3, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 298 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: H 3
+                                     }CardMsg 
+
+TIME: 298 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 298 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 298 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: H 3
+                                      }CardMsg 
+
+TIME: 304 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 304 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: C K
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8, C K,
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 310 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: C K
+                                      }CardMsg 
+
+TIME: 310 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 310 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 310 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: C K
+                                     }CardMsg 
+
+TIME: 316 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 316 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: H 10
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, H 2, D 3, S 4, C 4, D 4, C 5, C 6, C 7, H 10,
+Fred: Sorted hand: D A, S 2, H 2, D 3, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 322 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: H 10
+                                     }CardMsg 
+
+TIME: 322 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 322 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 322 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: H 10
+                                      }CardMsg 
+
+TIME: 328 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 328 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: C 9
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8, C 9,
+Devin: Sorted hand: H A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 334 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: C 9
+                                      }CardMsg 
+
+TIME: 334 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 334 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 334 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: C 9
+                                     }CardMsg 
+
+TIME: 340 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 340 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: D J
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, H 2, D 3, S 4, C 4, D 4, C 5, C 6, C 7, D J,
+Fred: Sorted hand: D A, S 2, H 2, D 3, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 346 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: D J
+                                     }CardMsg 
+
+TIME: 346 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 346 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 346 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: D J
+                                      }CardMsg 
+
+TIME: 352 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 352 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: S A
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, S A, D 2, C 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+Devin: Sorted hand: H A, S A, D 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 358 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: C 2
+                                      }CardMsg 
+
+TIME: 358 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 358 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 358 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: C 2
+                                     }CardMsg 
+
+TIME: 364 SENDER: Fred RECVR: Devin  Message{  Handler: 9
+                                               Description: Draw discard 
+                                     }Message 
+
+TIME: 364 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: C 2
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, H 2, C 2, D 3, S 4, C 4, D 4, C 5, C 6, C 7,
+Fred: Sorted hand: D A, S 2, H 2, C 2, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 370 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: D 3
+                                     }CardMsg 
+
+TIME: 370 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 370 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 370 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: D 3
+                                      }CardMsg 
+
+TIME: 376 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 376 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: H 9
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, S A, D 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8, H 9,
+Devin: Sorted hand: H A, S A, D 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 382 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: H 9
+                                      }CardMsg 
+
+TIME: 382 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 382 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 382 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: H 9
+                                     }CardMsg 
+
+TIME: 388 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 388 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: H K
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, H 2, C 2, S 4, C 4, D 4, C 5, C 6, C 7, H K,
+Fred: Sorted hand: D A, S 2, H 2, C 2, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 394 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: H K
+                                     }CardMsg 
+
+TIME: 394 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 394 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 394 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: H K
+                                      }CardMsg 
+
+TIME: 400 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 400 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: D 6
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, S A, D 2, D 6, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+Devin: Sorted hand: H A, S A, D 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 406 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: D 6
+                                      }CardMsg 
+
+TIME: 406 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 406 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 406 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: D 6
+                                     }CardMsg 
+
+TIME: 412 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 412 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: S 6
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, H 2, C 2, S 4, C 4, D 4, C 5, C 6, S 6, C 7,
+Fred: Sorted hand: D A, S 2, H 2, C 2, S 4, C 4, D 4, C 5, C 6, C 7,
+
+
+TIME: 418 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: S 6
+                                     }CardMsg 
+
+TIME: 418 SENDER: Fred RECVR: Devin  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 418 SENDER: Devin RECVR: Devin  Message{  Handler: 14
+                                                Description: Query Top Card 
+                                      }Message 
+
+TIME: 418 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 7
+                                                Description: Top Card 
+                                                Card: S 6
+                                      }CardMsg 
+
+TIME: 424 SENDER: Devin RECVR: Devin  Message{  Handler: 8
+                                                Description: Draw stock pile 
+                                      }Message 
+
+TIME: 424 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 4
+                                                Description: Card Drawn 
+                                                Card: S Q
+                                      }CardMsg 
+
+Devin: Sorted hand: H A, S A, D 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8, S Q,
+Devin: Sorted hand: H A, S A, D 2, S 7, H 7, D 7, D 8, S 8, C 8, H 8,
+
+
+TIME: 430 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 11
+                                                Description: Card to discard 
+                                                Card: S Q
+                                      }CardMsg 
+
+TIME: 430 SENDER: Devin RECVR: Fred  Message{  Handler: 1
+                                               Description: Your turn 
+                                     }Message 
+
+TIME: 430 SENDER: Fred RECVR: Devin  Message{  Handler: 14
+                                               Description: Query Top Card 
+                                     }Message 
+
+TIME: 430 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 7
+                                               Description: Top Card 
+                                               Card: S Q
+                                     }CardMsg 
+
+TIME: 436 SENDER: Fred RECVR: Devin  Message{  Handler: 8
+                                               Description: Draw stock pile 
+                                     }Message 
+
+TIME: 436 SENDER: Devin RECVR: Fred  CardMsg{  Handler: 4
+                                               Description: Card Drawn 
+                                               Card: H 4
+                                     }CardMsg 
+
+Fred: Sorted hand: D A, S 2, H 2, C 2, S 4, C 4, D 4, H 4, C 5, C 6, C 7,
+Fred: Sorted hand: S 2, H 2, C 2, S 4, C 4, D 4, H 4, C 5, C 6, C 7,
+
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 11
+                                               Description: Card to discard 
+                                               Card: D A
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  MeldsMsg{  Handler: 2
+                                                Description: Knock 
+                                                **Melds** 
+                                     }MeldsMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  Message{  Handler: 6
+                                                Description: Return hand 
+                                      }Message 
+
+TIME: 442 SENDER: Devin RECVR: Fred  Message{  Handler: 6
+                                               Description: Return hand 
+                                     }Message 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: H A
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: S A
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: D 2
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: S 7
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: H 7
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: D 7
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: D 8
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: S 8
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: C 8
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  CardMsg{  Handler: 12
+                                                Description: Card to return 
+                                                Card: H 8
+                                      }CardMsg 
+
+TIME: 442 SENDER: Devin RECVR: Devin  Message{  Handler: 13
+                                                Description: Hand empty 
+                                      }Message 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: S 2
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: H 2
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: C 2
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: S 4
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: C 4
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: D 4
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: H 4
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: C 5
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: C 6
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  CardMsg{  Handler: 12
+                                               Description: Card to return 
+                                               Card: C 7
+                                     }CardMsg 
+
+TIME: 442 SENDER: Fred RECVR: Devin  Message{  Handler: 13
+                                               Description: Hand empty 
+                                     }Message 
+
+
+}Game1
+
+GinRummy{ 
+          SecondsPerTick: 7
+          Rounds: 1
+          Player: 
+                  Player{ 
+                           name: Fred
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                  }Player 
+          Dealer: 
+                  Dealer{ 
+                           name: Devin
+                           Speed_InitialSort: 20
+                           Speed_Draw: 2
+                           Speed_Discard: 2
+                           Speed_DecisionPickup: 4
+                           Speed_DecisionDiscard: 4
+                           StrategyChoice: Advanced
+                           Speed_Shuffle: 40
+                           Speed_Deal: 34
+                  }Dealer 
+}GinRummy 
+
+Simulation Statistics:
+Minimum number of events : 225
+Average number of events : 225
+Maximum number of events : 225
+Minimum game length in ticks: 442
+Average game length in ticks: 442
+Maximum game length in ticks: 442
+Minimum game length in time: 00:51:34
+Average game length in time: 00:51:34
+Maximum game length in time: 00:51:34
+Minimum winning game length of Player in ticks: 442
+Average winning game length of Player in ticks: 442
+Maximum winning game length of Player in ticks: 442
+Minimum winning game length of Player in time: 00:51:34
+Average winning game length of Player in time: 00:51:34
+Maximum winning game length of Player in time: 00:51:34
+Minimum winning game length of Dealer in ticks: 0
+Average winning game length of Dealer in ticks: 0
+Maximum winning game length of Dealer in ticks: 0
+Minimum winning game length of Dealer in time: 00:00:00
+Average winning game length of Dealer in time: 00:00:00
+Maximum winning game length of Dealer in time: 00:00:00
+Player wins per min: 0.0196
+Dealer wins per min: 0
+Percentage Player wins: 1
+Percentage Dealer wins: 0
+Percentage Draws: 0
