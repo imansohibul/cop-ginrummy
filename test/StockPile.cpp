@@ -1,6 +1,5 @@
-
 #include "StockPile.h"
-using namespace std;
+
 
 namespace SimModels {
 	//Stockpile Methods
